@@ -1,0 +1,71 @@
+@font-face {
+    /*Шрифты*/
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: "normal";
+    src: local("roboto"),
+        url("roboto.woff2") format("woff2"),
+        url("roboto.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    font-weight: 700;
+    font-style: "normal";
+    src: local("robotobold"),
+        url("robotobold.woff2") format("woff2"),
+        url("robotobold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    font-weight: 500;
+    font-style: "normal";
+    src: local("robotomedium"),
+        url("robotomedium.woff2") format("woff2"),
+        url("robotomedium.woff") format("woff")
+}
+
+:root {
+    /*Кастомные свойства*/
+    --basic-black: #000;
+    --basic-white: #fff;
+    --basic-grey: #EEEEEE;
+    --darktext: #283136;
+    --basic-greytext: #666;
+    --btngrey: #E1E1E1;
+    --text-footerdark: #444444;
+    --basic-red: #FB565A;
+    --basic-green: #00CA74;
+    --basic-yellow: #EFC849;
+    --hover-red: #E74246;
+    --active-red: #D7373B;
+    --btn-hover-green: #00BC6C;
+    --btn-active-green: #00AA62;
+    --btn-hover-yellow: #EAB534;
+    --btn-active-yellow: #E5A722;
+    --btn-hover-grey: #DFDFDF;
+    --btn-active-grey: #D5D5D5;
+    --basic-dark-grey: #4D4D4D;
+}
+
+.page-body {
+    min-width: 1440px;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--darktext);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
