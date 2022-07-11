@@ -47,6 +47,7 @@
     --btn-hover-grey: #DFDFDF;
     --btn-active-grey: #D5D5D5;
     --basic-dark-grey: #4D4D4D;
+    --background-grey: #C1C1C1;
 }
 
 .page-body {
@@ -68,4 +69,34 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.page-header {
+    background-color: var(--basic-grey);
+}
+
+.page-navigation {
+    line-height: 30px;
+}
+
+.page-logo:hover {
+    opacity: 0.7;
+}
+
+.site-navigation {
+    list-style-type: none;
+}
+
+.page-navigation a {
+    color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.cart-link:hover {
+    color: var(--active-red);
+}
+
+.page-navigation a:active {
+    opacity: 0.3;
+    color: var(--basic-black);
 }
