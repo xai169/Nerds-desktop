@@ -1,11 +1,10 @@
 @font-face {
-    /*Шрифты*/
     font-family: "Roboto";
     font-weight: 400;
     font-style: "normal";
     src: local("roboto"),
-        url("roboto.woff2") format("woff2"),
-        url("roboto.woff") format("woff")
+        url("fonts/roboto.woff2") format("woff2"),
+        url("fonts/roboto.woff") format("woff")
 }
 
 @font-face {
@@ -13,8 +12,8 @@
     font-weight: 700;
     font-style: "normal";
     src: local("robotobold"),
-        url("robotobold.woff2") format("woff2"),
-        url("robotobold.woff") format("woff")
+        url("fonts/robotobold.woff2") format("woff2"),
+        url("fonts/robotobold.woff") format("woff")
 }
 
 @font-face {
@@ -22,8 +21,8 @@
     font-weight: 500;
     font-style: "normal";
     src: local("robotomedium"),
-        url("robotomedium.woff2") format("woff2"),
-        url("robotomedium.woff") format("woff")
+        url("fonts/robotomedium.woff2") format("woff2"),
+        url("fonts/robotomedium.woff") format("woff")
 }
 
 :root {
@@ -48,6 +47,7 @@
     --btn-active-grey: #D5D5D5;
     --basic-dark-grey: #4D4D4D;
     --background-grey: #C1C1C1;
+    --white-active: rgba(255, 255, 255, 0.3)
 }
 
 .page-body {
@@ -58,7 +58,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: var(--darktext);
+    color: var(--basic-black);
     background-color: var(--basic-white);
 }
 
@@ -71,7 +71,21 @@ img {
     height: auto;
 }
 
-.page-header {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.page-header,
+.main-slider {
     background-color: var(--basic-grey);
 }
 
@@ -89,6 +103,8 @@ img {
 
 .page-navigation a {
     color: var(--basic-black);
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .site-navigation a:hover,
@@ -99,4 +115,35 @@ img {
 .page-navigation a:active {
     opacity: 0.3;
     color: var(--basic-black);
+}
+
+.btn {
+    background-color: var(--basic-red);
+    color: var(--basic-white);
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.slider-btn {
+    padding: 16px 54px;
+}
+
+.slider-btn:hover {
+    background-color: var(--hover-red);
+}
+
+.slider-btn:active {
+    background-color: var(--active-red);
+    color: var(--white-active);
+}
+
+.slider-item p:nth-child(1) {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.slider-item p:nth-child(2) {
+    line-height: 24px;
+    color: var(--darktext);
 }
