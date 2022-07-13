@@ -50,6 +50,7 @@
     --white-active: rgba(255, 255, 255, 0.3)
 }
 
+/*общие*/
 .page-body {
     min-width: 1440px;
     padding: 0;
@@ -84,6 +85,7 @@ img {
     overflow: hidden;
 }
 
+/*header*/
 .page-header,
 .main-slider {
     background-color: var(--basic-grey);
@@ -128,11 +130,13 @@ img {
     padding: 16px 54px;
 }
 
-.slider-btn:hover {
+.slider-btn:hover,
+.web-btn:hover {
     background-color: var(--hover-red);
 }
 
-.slider-btn:active {
+.slider-btn:active,
+.web-btn:active {
     background-color: var(--active-red);
     color: var(--white-active);
 }
@@ -147,3 +151,83 @@ img {
     line-height: 24px;
     color: var(--darktext);
 }
+
+/*services*/
+
+.services-card {
+    list-style-type: none;
+}
+
+.services-card h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.services-card p {
+    color: var(--darktext);
+}
+
+.web-btn,
+.app-btn,
+.presentation-btn {
+    padding: 17px 40px 15px 39px;
+}
+
+.app-btn {
+    background-color: var(--basic-green)
+}
+
+.app-btn:hover {
+    background-color: var(--btn-hover-green)
+}
+
+.app-btn:active {
+    background-color: var(--btn-active-green);
+    color: var(--white-active);
+}
+
+.presentation-btn {
+    background-color: var(--basic-yellow)
+}
+
+.presentation-btn:hover {
+    background-color: var(--btn-hover-yellow)
+}
+
+.presentation-btn:active {
+    background-color: var(--btn-active-yellow);
+    color: var(--white-active);
+}
+
+/*about_info*/
+
+.about_info-tagline {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.about_info p {
+    color: var(--darktext);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.about_info-list-head {
+    font-weight: 700;
+}
+
+/*.about_info-list {
+    list-style-image: url("../img/list-type.png");
+}/
+    Пытаюсь сделать маркеры списков как в макете
+.about_info-item {
+    background: url("../img/list-type.png") no-repeat left center;
+    padding-left: 100px;
+    list-style: none;
+    margin: 0;
+    vertical-align: middle;
+}*/
