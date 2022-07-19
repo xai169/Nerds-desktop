@@ -47,12 +47,13 @@
     --btn-active-grey: #D5D5D5;
     --basic-dark-grey: #4D4D4D;
     --background-grey: #C1C1C1;
+    --footer-grey: #444444;
     --white-active: rgba(255, 255, 255, 0.3)
 }
 
 /*общие*/
 .page-body {
-    min-width: 1440px;
+    min-width: 1420px;
     padding: 0;
     margin: 0;
     font-family: "Roboto", Arial, sans-serif;
@@ -228,15 +229,23 @@ img {
 
 /*.about_info-list {
     list-style-image: url("../img/list-type.png");
-}/
-    Пытаюсь сделать маркеры списков как в макете
-.about_info-item {
+}
+    /*Пытаюсь сделать маркеры списков как в макете*/
+/*.about_info-item {
     background: url("../img/list-type.png") no-repeat left center;
     padding-left: 100px;
     list-style: none;
     margin: 0;
     vertical-align: middle;
 }*/
+
+.about_info-list {
+    list-style-type: none;
+}
+
+.about_info-item::before {
+    content: url("../img/list-type.png");
+}
 
 /*statistics*/
 
@@ -260,7 +269,7 @@ img {
     margin: 0;
 }
 
-/*partners(нужно сделать боковые рамки у изображений-ссылок*/
+/*partners(нужно сделать боковые рамки у изображений-ссылок)*/
 
 .partners-list {
     list-style: none;
@@ -300,6 +309,9 @@ img {
 }
 
 /*footer*/
+.social-list {
+    list-style-type: none;
+}
 
 .social-item {
     /*потом убрать*/
@@ -325,7 +337,17 @@ img {
 }
 
 .social-item:nth-child(3) a {
+    /*кривые паддинги*/
     padding: 30px;
 }
 
-/* /*кривые паддинги*/
+.action-tagline {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.action-text {
+    color: var(--footer-grey);
+    line-height: 24px;
+}
