@@ -227,10 +227,7 @@ img {
     font-weight: 700;
 }
 
-/*.about_info-list {
-    list-style-image: url("../img/list-type.png");
-}
-    /*Пытаюсь сделать маркеры списков как в макете*/
+/*Пытаюсь сделать маркеры списков как в макете*/
 /*.about_info-item {
     background: url("../img/list-type.png") no-repeat left center;
     padding-left: 100px;
@@ -244,7 +241,10 @@ img {
 }
 
 .about_info-item::before {
+    /*Сделал маркеры!!!*/
     content: url("../img/list-type.png");
+    vertical-align: 20%;
+    padding-right: 7px;
 }
 
 /*statistics*/
@@ -276,6 +276,13 @@ img {
     border-bottom: 2px solid var(--basic-grey);
     border-top: 2px solid var(--basic-grey);
 }
+
+/* .partners-item::after { 
+    /*Пытаюсь сделать правильные рамки у элементов*
+    content: url("../img/list-border.png");
+    padding-left: 45px;
+    vertical-align: 20%;
+} */
 
 .partners-item a:link {
     opacity: 0.2;
