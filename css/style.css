@@ -159,6 +159,18 @@ img {
     color: var(--darktext);
 }
 
+.bg-phone {
+    background-image: url("../img/slide-1.png");
+}
+
+.bg-pc {
+    background-image: url("../img/slide-2.png");
+}
+
+.bg-tablet {
+    background-image: url("../img/slide-3.png");
+}
+
 /*services*/
 
 .services-card {
