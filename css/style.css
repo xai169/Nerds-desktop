@@ -48,7 +48,12 @@
     --basic-dark-grey: #4D4D4D;
     --background-grey: #C1C1C1;
     --footer-grey: #444444;
-    --white-active: rgba(255, 255, 255, 0.3)
+    --white-active: rgba(255, 255, 255, 0.3);
+    --shadow-grey: rgba(0, 1, 1, 0.1);
+    --active-black-text: rgba(1, 1, 1, 0.3);
+    --grey-border: #DBDBDB;
+    --active-page-btn: rgba(0, 0, 0, 0.0001);
+
 }
 
 /*общие*/
@@ -78,6 +83,15 @@ img {
     color: var(--basic-white);
     border-radius: 3px;
     text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--hover-red);
+}
+
+.btn:active {
+    background-color: var(--active-red);
+    color: var(--white-active);
 }
 
 .visually-hidden {
@@ -126,6 +140,8 @@ img {
     opacity: 0.3;
     color: var(--basic-black);
 }
+
+/* Главная страница */
 
 /*slider*/
 
@@ -369,4 +385,153 @@ img {
 .action-text {
     color: var(--footer-grey);
     line-height: 24px;
+}
+
+/* Магазин */
+
+.main-headline {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    background-color: var(--basic-grey);
+}
+
+/* Фильтр */
+
+.filter {
+    border: none;
+}
+
+.filter-headline {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price_field-input {
+    background-color: var(--basic-grey);
+    border-radius: 3px;
+}
+
+/* Нужно сделать стили для инпутов и тд */
+.range-input {
+    color: var(--darktext);
+    background-color: var(--basic-grey);
+    border: none;
+    text-align: center;
+    padding: 8px 8px;
+}
+
+.grey-btn {
+    color: var(--basic-black);
+    background-color: var(--basic-grey);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.filter-btn {
+    padding: 17px 89px 15px 88px;
+    border: none;
+}
+
+.grey-btn:hover {
+    background-color: var(--btn-hover-grey);
+}
+
+.grey-btn:active {
+    background-color: var(--btn-active-grey);
+    color: var(--active-black-text);
+    box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+/* Сортировка */
+
+.sorting-list {
+    list-style: none;
+}
+
+.sorting-list-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.3;
+}
+
+.sorting-list-item:hover {
+    opacity: 0.6;
+}
+
+.sorting-list-item:active,
+.active-sorting-item {
+    opacity: 1;
+}
+
+/* Товары */
+
+.products-list {
+    list-style: none;
+}
+
+.products-description {
+    background-color: var(--basic-grey);
+    color: var(--basic-greytext);
+    line-height: 18px;
+}
+
+/* Ссылка после посещения */
+.description-headline {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.products-btn {
+    padding: 17px 72px 15px 72px;
+}
+
+/* Переключатель страниц */
+
+.page-switcher {
+    list-style: none;
+}
+
+.page-item {
+    padding: 30px;
+}
+
+.page-btn:not(.active-page) {
+    padding: 17px 20px 15px 20px;
+    color: var(--basic-black);
+    background-color: var(--basic-grey);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.page-btn:hover:not(.active-page) {
+    background-color: var(--btn-hover-grey);
+}
+
+.page-btn:active:not(.active-page) {
+    background-color: var(--btn-active-grey);
+    color: var(--active-black-text);
+    box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+.active-page {
+    border: 2px solid var(--grey-border);
+    background-color: var(--active-page-btn);
+    padding: 17px 20px 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
