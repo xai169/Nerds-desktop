@@ -33,7 +33,6 @@
     --darktext: #283136;
     --basic-greytext: #666;
     --btngrey: #E1E1E1;
-    --text-footerdark: #444444;
     --basic-red: #FB565A;
     --basic-green: #00CA74;
     --basic-yellow: #EFC849;
@@ -58,7 +57,7 @@
 
 /*общие*/
 .page-body {
-    min-width: 1420px;
+    min-width: 1440px;
     padding: 0;
     margin: 0;
     font-family: "Roboto", Arial, sans-serif;
