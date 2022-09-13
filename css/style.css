@@ -139,6 +139,11 @@ img {
     margin: 0 auto;
 }
 
+.headline-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+}
+
 /*header*/
 .page-header,
 .main-slider {
@@ -185,6 +190,7 @@ img {
 
 .slider-btn {
     padding: 16px 54px;
+    display: inline-block;
 }
 
 .slider-btn:hover,
@@ -206,11 +212,13 @@ img {
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
-    margin-top: 0;
+    margin: 0 0 25px 0;
+    padding-top: 78px;
 }
 
 .slider-item p:nth-child(2) {
     line-height: 24px;
+    margin: 0 0 38px 0;
     color: var(--darktext);
 }
 
@@ -492,7 +500,13 @@ img {
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
+    margin: 0;
+    padding: 78px 0 108px 0;
+}
+
+.headline-container {
     background-color: var(--basic-grey);
+    text-align: center;
 }
 
 /* Фильтр */
