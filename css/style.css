@@ -509,6 +509,12 @@ img {
     text-align: center;
 }
 
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+}
+
 /* Фильтр */
 
 .filter {
@@ -588,6 +594,10 @@ img {
 
 .products-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
 }
 
 .products-description {

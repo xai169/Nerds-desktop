@@ -34,122 +34,130 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <div class="headline-container">
             <div class="headline-wrapper">
                 <h1 class="main-headline">Магазин готовых шаблонов</h1>
             </div>
         </div>
-        <section class="filter-area">
-            <h2 class="visually-hidden">Фильтр</h2>
-            <form action="https://echo.htmlacademy.ru/" method="post">
-                <fieldset class="filter filter-price_field">
-                    <legend class="filter-headline price_field-headline">Стоимость:</legend>
-                    <input type="range" id="priceslider" name="priceslider" min="0" max="150000" step="1"
-                        class="price_field-input">
-                    <p class="price_field-range">
-                        <label class="range-label text-uppercase">От <input type="text" name="min_price" value="0"
-                                class="range-input"></label>
-                        <label class="range-label text-uppercase">До <input type="text" name="max_price" value="150000"
-                                class="range-input"></label>
-                    </p>
-                </fieldset>
-                <fieldset class="filter filter-grid">
-                    <legend class="filter-headline grid-headline">Сетка:</legend>
-                    <label class="grid-label"><input type="radio" name="grid" value="adaptive" class="grid-input"
-                            checked> Адаптивная</label>
-                    <label class="grid-label"><input type="radio" name="grid" value="fixed" class="grid-input">
-                        Фиксированная</label>
-                    <label class="grid-label"><input type="radio" name="grid" value="rubber" class="grid-input">
-                        Резиновая</label>
-                </fieldset>
-                <fieldset class="filter filter-specials">
-                    <legend class="filter-headline specials-headline">Особенности:</legend>
-                    <label class="specials-label"><input type="checkbox" name="features" value="slider"
-                            class="specials-input" checked> Слайдер</label>
-                    <label class="specials-label"><input type="checkbox" name="features" value="advantages"
-                            class="specials-input"> Блок преимуществ</label>
-                    <label class="specials-label"><input type="checkbox" name="features" value="news"
-                            class="specials-input" checked> Новости</label>
-                    <label class="specials-label"><input type="checkbox" name="features" value="galery"
-                            class="specials-input"> Галерея</label>
-                    <label class="specials-label"><input type="checkbox" name="features" value="basket"
-                            class="specials-input"> Корзина</label>
-                </fieldset>
-                <button type="submit" class="grey-btn filter-btn">Показать</button>
-            </form>
-        </section>
-        <section class="sorting">
-            <h2 class="visually-hidden">Сортировка товаров</h2>
-            <p class="filter-headline sorting-headline">Сортировать:</p>
-            <ul class="sorting-list">
-                <li class="sorting-list-item active-sorting-item"><a href="#"></a>По цене</li>
-                <li class="sorting-list-item"><a href="#"></a>По типу</li>
-                <li class="sorting-list-item"><a href="#"></a>По названию</li>
-                <li class="sorting-list-item"><a href="#"></a><img src="img/icon-down.svg" alt="Стрелка вниз"></li>
-                <li class="sorting-list-item"><a href="#"></a><img src="img/icon-up.svg" alt="Стрелка вверх"></li>
-            </ul>
-        </section>
-        <section class="products">
-            <h2 class="visually-hidden">Товары</h2>
-            <ul class="products-list">
-                <li class="products-item">
-                    <img src="img/sedona.png" alt="Пример сайта sedona" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">Sedona</a></h3>
-                        <p>Информационный сайт для туристов</p>
-                        <a href="#" class="btn products-btn">9 900 &#8381;</a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="img/pink.png" alt="Пример сайта pink" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">Pink</a></h3>
-                        <p>Продуктовый лендингприложения д
-                    </div>ля iOS и Android</p>
-                    <a href="#" class="btn products-btn">9 900 &#8381;</a>
+        <div class="main-container">
+            <div class="filter-container">
+                <section class="filter-area">
+                    <h2 class="visually-hidden">Фильтр</h2>
+                    <form action="https://echo.htmlacademy.ru/" method="post">
+                        <fieldset class="filter filter-price_field">
+                            <legend class="filter-headline price_field-headline">Стоимость:</legend>
+                            <input type="range" id="priceslider" name="priceslider" min="0" max="150000" step="1"
+                                class="price_field-input">
+                            <p class="price_field-range">
+                                <label class="range-label text-uppercase">От <input type="text" name="min_price"
+                                        value="0" class="range-input"></label><br>
+                                <label class="range-label text-uppercase">До <input type="text" name="max_price"
+                                        value="150000" class="range-input"></label>
+                            </p>
+                        </fieldset>
+                        <fieldset class="filter filter-grid">
+                            <legend class="filter-headline grid-headline">Сетка:</legend>
+                            <label class="grid-label"><input type="radio" name="grid" value="adaptive"
+                                    class="grid-input" checked> Адаптивная</label><br>
+                            <label class="grid-label"><input type="radio" name="grid" value="fixed" class="grid-input">
+                                Фиксированная</label><br>
+                            <label class="grid-label"><input type="radio" name="grid" value="rubber" class="grid-input">
+                                Резиновая</label><br>
+                        </fieldset>
+                        <fieldset class="filter filter-specials">
+                            <legend class="filter-headline specials-headline">Особенности:</legend>
+                            <label class="specials-label"><input type="checkbox" name="features" value="slider"
+                                    class="specials-input" checked> Слайдер</label><br>
+                            <label class="specials-label"><input type="checkbox" name="features" value="advantages"
+                                    class="specials-input"> Блок преимуществ</label><br>
+                            <label class="specials-label"><input type="checkbox" name="features" value="news"
+                                    class="specials-input" checked> Новости</label><br>
+                            <label class="specials-label"><input type="checkbox" name="features" value="galery"
+                                    class="specials-input"> Галерея</label><br>
+                            <label class="specials-label"><input type="checkbox" name="features" value="basket"
+                                    class="specials-input"> Корзина</label><br>
+                        </fieldset>
+                        <button type="submit" class="grey-btn filter-btn">Показать</button>
+                    </form>
+                </section>
+            </div>
+            <div class="products-container">
+                <section class="sorting">
+                    <h2 class="visually-hidden">Сортировка товаров</h2>
+                    <p class="filter-headline sorting-headline">Сортировать:</p>
+                    <ul class="sorting-list">
+                        <li class="sorting-list-item active-sorting-item"><a href="#"></a>По цене</li>
+                        <li class="sorting-list-item"><a href="#"></a>По типу</li>
+                        <li class="sorting-list-item"><a href="#"></a>По названию</li>
+                        <li class="sorting-list-item"><a href="#"></a><img src="img/icon-down.svg" alt="Стрелка вниз">
+                        </li>
+                        <li class="sorting-list-item"><a href="#"></a><img src="img/icon-up.svg" alt="Стрелка вверх">
+                        </li>
+                    </ul>
+                </section>
+                <section class="products">
+                    <h2 class="visually-hidden">Товары</h2>
+                    <ul class="products-list">
+                        <li class="products-item">
+                            <img src="img/sedona.png" alt="Пример сайта sedona" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">Sedona</a></h3>
+                                <p>Информационный сайт для туристов</p>
+                                <a href="#" class="btn products-btn">9 900 &#8381;</a>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <img src="img/pink.png" alt="Пример сайта pink" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">Pink</a></h3>
+                                <p>Продуктовый лендингприложения для iOS и Android</p>
+                            </div>
+                            <a href="#" class="btn products-btn">9 900 &#8381;</a>
 
-                </li>
-                <li class="products-item">
-                    <img src="img/barbershop.png" alt="Пример сайта barbershop" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">Barbershop</a></h3>
-                        <p>Сайт салона красоты. Для мужчин, да.</p>
-                        <a href="#" class="btn products-btn">9 900 &#8381;</a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="img/mishka.png" alt="Пример сайта mishki" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">Mishki</a></h3>
-                        <p>Интернет-магазин вязаных игрушек</p>
-                        <a href="#" class="btn products-btn">9 900 &#8381;</a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="img/aplus.png" alt="Пример сайта aplus" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">A plus</a></h3>
-                        <p>Лендинг курсов повышения квалификации</p>
-                        <a href="#" class="btn products-btn">9 900 &#8381;</a>
-                    </div>
-                </li>
-                <li class="products-item">
-                    <img src="img/kvast.png" alt="Пример сайта kvast" width="359" height="578">
-                    <div class="products-description">
-                        <h3 class="description-headline"><a href="#">Kbact</a></h3>
-                        <p>Промо-сайт производителякрафтового кваса</p>
-                        <a href="#" class="btn products-btn">9 900 &#8381;</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="page-switcher">
-                <li class="page-item"><a class="grey-btn page-btn active-page">1</a></li>
-                <li class="page-item"><a href="#" class="grey-btn page-btn">2</a></li>
-                <li class="page-item"><a href="#" class="grey-btn page-btn">3</a></li>
-                <li class="page-item"><a href="#" class="grey-btn page-btn">Следующая</a></li>
-            </ul>
-        </section>
+                        </li>
+                        <li class="products-item">
+                            <img src="img/barbershop.png" alt="Пример сайта barbershop" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">Barbershop</a></h3>
+                                <p>Сайт салона красоты. Для мужчин, да.</p>
+                                <a href="#" class="btn products-btn">9 900 &#8381;</a>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <img src="img/mishka.png" alt="Пример сайта mishki" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">Mishki</a></h3>
+                                <p>Интернет-магазин вязаных игрушек</p>
+                                <a href="#" class="btn products-btn">9 900 &#8381;</a>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <img src="img/aplus.png" alt="Пример сайта aplus" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">A plus</a></h3>
+                                <p>Лендинг курсов повышения квалификации</p>
+                                <a href="#" class="btn products-btn">9 900 &#8381;</a>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <img src="img/kvast.png" alt="Пример сайта kvast" width="359" height="578">
+                            <div class="products-description">
+                                <h3 class="description-headline"><a href="#">Kbact</a></h3>
+                                <p>Промо-сайт производителякрафтового кваса</p>
+                                <a href="#" class="btn products-btn">9 900 &#8381;</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="page-switcher">
+                        <li class="page-item"><a class="grey-btn page-btn active-page">1</a></li>
+                        <li class="page-item"><a href="#" class="grey-btn page-btn">2</a></li>
+                        <li class="page-item"><a href="#" class="grey-btn page-btn">3</a></li>
+                        <li class="page-item"><a href="#" class="grey-btn page-btn">Следующая</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
         <section class="contacts">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts-tagline text-uppercase">Nёrds design studio</p>
