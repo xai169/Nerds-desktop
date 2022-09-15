@@ -507,6 +507,7 @@ img {
 .headline-container {
     background-color: var(--basic-grey);
     text-align: center;
+    margin-bottom: 55px;
 }
 
 .main-container {
@@ -519,6 +520,8 @@ img {
 
 .filter {
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .filter-headline {
@@ -526,6 +529,10 @@ img {
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.price_field-headline {
+    margin-bottom: 48px;
 }
 
 .price_field-input {
@@ -570,8 +577,23 @@ img {
 
 /* Сортировка */
 
+.sorting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    margin-bottom: 48px;
+}
+
+.sorting-headline {
+    margin: 0;
+}
+
 .sorting-list {
     list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .sorting-list-item {
@@ -598,6 +620,8 @@ img {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     row-gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .products-description {
