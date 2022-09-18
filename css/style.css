@@ -592,7 +592,9 @@ img {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -601,6 +603,8 @@ img {
     font-size: 14px;
     line-height: 18px;
     opacity: 0.3;
+    display: inline-block;
+    width: auto;
 }
 
 .sorting-list-item:hover {
@@ -620,7 +624,7 @@ img {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     row-gap: 30px;
-    margin: 0;
+    margin-bottom: 54px;
     padding: 0;
 }
 
@@ -628,6 +632,32 @@ img {
     background-color: var(--basic-grey);
     color: var(--basic-greytext);
     line-height: 18px;
+    text-align: center;
+    padding: 26px 53px 44px 52px;
+}
+
+.products-description a {
+    display: inline-block;
+}
+
+.products-description p {
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.description-headline a {
+    color: var(--basic-black);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.description-headline a:hover {
+    color: var(--basic-red);
+}
+
+.description-headline a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 /* Ссылка после посещения */
@@ -635,6 +665,7 @@ img {
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
+    margin: 0 0 12px 0;
 }
 
 .products-btn {
@@ -645,14 +676,21 @@ img {
 
 .page-switcher {
     list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 60px;
 }
 
 .page-item {
-    padding: 30px;
+    margin-right: 11px;
+}
+
+.page-btn {
+    padding: 17px 20px 15px 20px;
 }
 
 .page-btn:not(.active-page) {
-    padding: 17px 20px 15px 20px;
     color: var(--basic-black);
     background-color: var(--basic-grey);
     font-size: 16px;
@@ -675,10 +713,13 @@ img {
 .active-page {
     border: 2px solid var(--grey-border);
     background-color: var(--active-page-btn);
-    padding: 17px 20px 15px 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     border-radius: 3px;
     text-transform: uppercase;
+}
+
+.next-btn {
+    padding: 17px 77px 15px 78px;
 }
