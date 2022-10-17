@@ -159,15 +159,30 @@ img {
 }
 
 .site-navigation {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.site-navigation-item {
+    margin-right: 45px;
 }
 
 .page-navigation a {
     color: var(--basic-black);
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.cart-link {
+    align-self: center;
+}
+
+.cart-link img {
+    margin-right: 25px;
 }
 
 .site-navigation a:hover,
@@ -260,16 +275,20 @@ img {
     text-transform: uppercase;
     font-size: 24px;
     line-height: 30px;
+    margin-bottom: 16px;
 }
 
 .services-card p {
     color: var(--darktext);
+    margin-bottom: 32px;
+    margin-top: 0;
 }
 
 .web-btn,
 .app-btn,
 .presentation-btn {
     padding: 17px 40px 15px 39px;
+    display: inline-block;
 }
 
 .app-btn {
@@ -320,6 +339,7 @@ img {
 
 .about_info-list-head {
     font-weight: 700;
+    margin-bottom: 23px;
 }
 
 /*Пытаюсь сделать маркеры списков как в макете*/
@@ -337,6 +357,10 @@ img {
     margin: 0;
 }
 
+.about_info-item {
+    margin-bottom: 24px;
+}
+
 .about_info-item::before {
     /*Сделал маркеры!!!*/
     content: url("../img/list-type.png");
@@ -348,6 +372,12 @@ img {
 
 .statistics-list-head {
     font-weight: 700;
+}
+
+.statistics-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .statistics-list dt {
@@ -418,6 +448,12 @@ img {
     margin-bottom: 68px;
 }
 
+/* .contacts-info {
+    background-color: var(--basic-white);
+    display: flex;
+    flex-direction: column;
+} */
+
 .contacts-tagline {
     font-size: 18px;
     line-height: 30px;
@@ -432,6 +468,7 @@ img {
 .contacts-btn {
     padding: 17px 44px 15px 44px;
     border: none;
+    display: inline-block;
 }
 
 /*footer*/
@@ -448,11 +485,11 @@ img {
 
 .social-list {
     list-style-type: none;
+    display: flex;
 }
 
 .social-item {
     /*потом убрать*/
-    padding: 30px;
     display: block;
 }
 
@@ -468,6 +505,7 @@ img {
 
 .social-item:nth-child(1) a {
     padding: 33px 28px 33px 27px;
+    display: block;
 }
 
 .social-item:nth-child(2) a {
