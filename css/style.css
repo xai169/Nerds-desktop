@@ -485,12 +485,15 @@ img {
 
 .social-list {
     list-style-type: none;
+    padding: 0;
     display: flex;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .social-item {
-    /*потом убрать*/
-    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .social-item a {
@@ -505,16 +508,26 @@ img {
 
 .social-item:nth-child(1) a {
     padding: 33px 28px 33px 27px;
-    display: block;
+    width: 26px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 9px;
 }
 
 .social-item:nth-child(2) a {
     padding: 31px 34px 28px 35px;
+    display: inline-block;
+    height: 22px;
+    width: 12px;
+    margin-right: 9px;
 }
 
 .social-item:nth-child(3) a {
     /*кривые паддинги*/
     padding: 30px;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
 }
 
 .action {
@@ -525,6 +538,7 @@ img {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+    margin: 0;
 }
 
 .action-text {
