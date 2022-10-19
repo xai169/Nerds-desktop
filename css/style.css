@@ -137,6 +137,7 @@ img {
 .contacts-wrapper {
     width: 1160px;
     margin: 0 auto;
+    padding: 54px 0;
 }
 
 .headline-wrapper {
@@ -446,29 +447,44 @@ img {
 .contacts {
     background: url("../img/map.png") no-repeat center;
     margin-bottom: 68px;
+    min-height: 416px;
 }
 
-/* .contacts-info {
+.contacts-info {
     background-color: var(--basic-white);
     display: flex;
     flex-direction: column;
-} */
+    padding: 50px 50px 50px 50px;
+    width: 319px;
+    height: 308px;
+    margin-right: auto;
+    box-sizing: border-box;
+}
 
 .contacts-tagline {
     font-size: 18px;
     line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 22px;
 }
 
 .contacts-address,
 .contacts-tel {
     color: var(--basic-greytext);
     line-height: 18px;
+    margin: 0;
+}
+
+.contacts-address {
+    margin-bottom: 20px;
 }
 
 .contacts-btn {
     padding: 17px 44px 15px 44px;
     border: none;
     display: inline-block;
+    margin-top: 37px;
 }
 
 /*footer*/

@@ -24,10 +24,10 @@
                     <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип комании">
                 </a>
                 <ul class="site-navigation">
-                    <li class=""><a href="blank.html">Студия</a></li>
-                    <li class=""><a href="blank.html">Клиенты</a></li>
-                    <li class=""><a href="catalog.html">Магазин</a></li>
-                    <li class=""><a href="blank.html">Контакты</a></li>
+                    <li class="site-navigation-item"><a href="blank.html">Студия</a></li>
+                    <li class="site-navigation-item"><a href="blank.html">Клиенты</a></li>
+                    <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
+                    <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
                 </ul>
                 <a href="blank.html" class="cart-link"><img src="img/basket-icon.svg" width="15" height="15"
                         alt="Иконка корзины">Корзина</a>
@@ -158,30 +158,36 @@
             </div>
         </div>
         <section class="contacts">
-            <h2 class="visually-hidden">Контакты</h2>
-            <p class="contacts-tagline text-uppercase">Nёrds design studio</p>
-            <p class="contacts-address">наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
-            <a href="tel:+78005558628;" class="contacts-tel">+7 800 555-86-28</a>
-            <button type="button" class="btn contacts-btn">Напишите нам</button>
+            <div class="contacts-wrapper">
+                <div class="contacts-info">
+                    <h2 class="visually-hidden">Контакты</h2>
+                    <p class="contacts-tagline text-uppercase">Nёrds design studio</p>
+                    <p class="contacts-address">наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</p>
+                    <a href="tel:+78005558628;" class="contacts-tel">+7 800 555-86-28</a>
+                    <button type="button" class="btn contacts-btn">Напишите нам</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="main-footer">
-        <section class="social">
-            <ul class="social-list">
-                <li class="social-item"><a href="vk"><img src="img/vk-icon.svg" width="26" height="15"
-                            alt="vk icon"></a>
-                </li>
-                <li class="social-item"><a href="fb"><img src="img/fb-icon.svg" width="12" height="22"
-                            alt="fb icon"></a>
-                </li>
-                <li class="social-item"><a href="insta"><img src="img/insta-icon.svg" width="21" height="21"
-                            alt="insta icon"></a></li>
-            </ul>
-        </section>
-        <section class="action">
-            <p class="action-tagline">Давайте дружить, это выгодно!</p>
-            <p class="action-text">Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+        <div class="footer-wrapper">
+            <section class="social">
+                <ul class="social-list">
+                    <li class="social-item"><a href="vk"><img src="img/vk-icon.svg" width="26" height="15"
+                                alt="vk icon"></a>
+                    </li>
+                    <li class="social-item"><a href="fb"><img src="img/fb-icon.svg" width="12" height="22"
+                                alt="fb icon"></a>
+                    </li>
+                    <li class="social-item"><a href="insta"><img src="img/insta-icon.svg" width="21" height="21"
+                                alt="insta icon"></a></li>
+                </ul>
+            </section>
+            <section class="action">
+                <p class="action-tagline">Давайте дружить, это выгодно!</p>
+                <p class="action-text">Скидка 10% для друзей из социальных сетей.</p>
+            </section>
+        </div>
     </footer>
 </body>
 
