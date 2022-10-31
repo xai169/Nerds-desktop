@@ -1,0 +1,793 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: "normal";
+    src: local("roboto"),
+        url("fonts/roboto.woff2") format("woff2"),
+        url("fonts/roboto.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    font-weight: 700;
+    font-style: "normal";
+    src: local("robotobold"),
+        url("fonts/robotobold.woff2") format("woff2"),
+        url("fonts/robotobold.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    font-weight: 500;
+    font-style: "normal";
+    src: local("robotomedium"),
+        url("fonts/robotomedium.woff2") format("woff2"),
+        url("fonts/robotomedium.woff") format("woff")
+}
+
+:root {
+    /*Кастомные свойства*/
+    --basic-black: #000;
+    --basic-white: #fff;
+    --basic-grey: #EEEEEE;
+    --darktext: #283136;
+    --basic-greytext: #666;
+    --btngrey: #E1E1E1;
+    --basic-red: #FB565A;
+    --basic-green: #00CA74;
+    --basic-yellow: #EFC849;
+    --hover-red: #E74246;
+    --active-red: #D7373B;
+    --btn-hover-green: #00BC6C;
+    --btn-active-green: #00AA62;
+    --btn-hover-yellow: #EAB534;
+    --btn-active-yellow: #E5A722;
+    --btn-hover-grey: #DFDFDF;
+    --btn-active-grey: #D5D5D5;
+    --basic-dark-grey: #4D4D4D;
+    --background-grey: #C1C1C1;
+    --footer-grey: #444444;
+    --white-active: rgba(255, 255, 255, 0.3);
+    --shadow-grey: rgba(0, 1, 1, 0.1);
+    --active-black-text: rgba(1, 1, 1, 0.3);
+    --grey-border: #DBDBDB;
+    --active-page-btn: rgba(0, 0, 0, 0.0001);
+
+}
+
+/*общие*/
+.page-body {
+    min-width: 1240px;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    background-color: var(--basic-red);
+    color: var(--basic-white);
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--hover-red);
+}
+
+.btn:active {
+    background-color: var(--active-red);
+    color: var(--white-active);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* grid */
+.page {
+    height: 100%;
+}
+
+.page-navigation-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    padding-top: 49px;
+}
+
+.main-slider-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    display: grid;
+}
+
+.main-container-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.contacts-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 54px 0;
+}
+
+.headline-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+/*header*/
+.page-header,
+.main-slider {
+    background-color: var(--basic-grey);
+}
+
+.page-navigation {
+    line-height: 30px;
+}
+
+.page-logo:hover {
+    opacity: 0.7;
+}
+
+.site-navigation {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-navigation-item {
+    margin-right: 45px;
+}
+
+.page-navigation a {
+    color: var(--basic-black);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.cart-link {
+    align-self: center;
+}
+
+.cart-link img {
+    margin-right: 25px;
+}
+
+.site-navigation a:hover,
+.cart-link:hover {
+    color: var(--active-red);
+}
+
+.page-navigation a:active {
+    opacity: 0.3;
+    color: var(--basic-black);
+}
+
+/* Главная страница */
+
+/*slider*/
+
+.main-slider {
+    margin-bottom: 80px;
+}
+
+.slider-btn {
+    padding: 16px 54px;
+    display: inline-block;
+}
+
+.slider-btn:hover,
+.web-btn:hover,
+.contacts-btn:hover,
+.social-item a:hover {
+    background-color: var(--hover-red);
+}
+
+.slider-btn:active,
+.web-btn:active,
+.contacts-btn:active,
+.social-item a:active {
+    background-color: var(--active-red);
+    color: var(--white-active);
+}
+
+.slider-item p:nth-child(1) {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    margin: 0 0 25px 0;
+    padding-top: 78px;
+}
+
+.slider-item p:nth-child(2) {
+    line-height: 24px;
+    margin: 0 0 38px 0;
+    color: var(--darktext);
+}
+
+.bg-phone {
+    background: url("../img/slide-1.png") no-repeat right;
+    height: 430px;
+
+}
+
+.bg-pc {
+    background-image: url("../img/slide-2.png");
+}
+
+.bg-tablet {
+    background-image: url("../img/slide-3.png");
+}
+
+/*services*/
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 100px;
+    padding-right: 60px;
+    margin-bottom: 80px;
+}
+
+.services-card {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* .services-card:last-child {
+    margin-right: 60px;
+} */
+
+.services-card h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+.services-card p {
+    color: var(--darktext);
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.web-btn,
+.app-btn,
+.presentation-btn {
+    padding: 17px 40px 15px 39px;
+    display: inline-block;
+}
+
+.app-btn {
+    background-color: var(--basic-green)
+}
+
+.app-btn:hover {
+    background-color: var(--btn-hover-green)
+}
+
+.app-btn:active {
+    background-color: var(--btn-active-green);
+    color: var(--white-active);
+}
+
+.presentation-btn {
+    background-color: var(--basic-yellow)
+}
+
+.presentation-btn:hover {
+    background-color: var(--btn-hover-yellow)
+}
+
+.presentation-btn:active {
+    background-color: var(--btn-active-yellow);
+    color: var(--white-active);
+}
+
+/*about_info*/
+
+.about_info {
+    grid-column: 1/3;
+}
+
+.about_info-tagline {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+.about_info p {
+    color: var(--darktext);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.about_info-list-head {
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+
+/*Пытаюсь сделать маркеры списков как в макете*/
+/*.about_info-item {
+    background: url("../img/list-type.png") no-repeat left center;
+    padding-left: 100px;
+    list-style: none;
+    margin: 0;
+    vertical-align: middle;
+}*/
+
+.about_info-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about_info-item {
+    margin-bottom: 24px;
+}
+
+.about_info-item::before {
+    /*Сделал маркеры!!!*/
+    content: url("../img/list-type.png");
+    vertical-align: 20%;
+    padding-right: 7px;
+}
+
+/*statistics*/
+
+.statistics-list-head {
+    font-weight: 700;
+}
+
+.statistics-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.statistics-list dt {
+    font-size: 45px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.statistics-list sup {
+    font-size: 26px;
+}
+
+.statistics-list dd {
+    line-height: 18px;
+    color: var(--darktext);
+    margin: 0;
+}
+
+/* index-columns */
+
+.index-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    margin-bottom: 73px;
+}
+
+/*partners(нужно сделать боковые рамки у изображений-ссылок)*/
+
+.partners {
+    border-bottom: 2px solid var(--basic-grey);
+    border-top: 2px solid var(--basic-grey);
+    padding: 46px 0 44px 0;
+}
+
+.partners-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+}
+
+/* .partners-item::after { 
+    /*Пытаюсь сделать правильные рамки у элементов*
+    content: url("../img/list-border.png");
+    padding-left: 45px;
+    vertical-align: 20%;
+} */
+
+.partners-item a:link {
+    opacity: 0.2;
+}
+
+
+.partners-item a:hover {
+    opacity: 1;
+}
+
+.partners-item a:active {
+    opacity: 0.1;
+}
+
+/*contacs*/
+
+.contacts {
+    background: url("../img/map.png") no-repeat center;
+    margin-bottom: 68px;
+    min-height: 416px;
+}
+
+.contacts-info {
+    background-color: var(--basic-white);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 50px 50px;
+    width: 319px;
+    height: 308px;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.contacts-tagline {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.contacts-address,
+.contacts-tel {
+    color: var(--basic-greytext);
+    line-height: 18px;
+    margin: 0;
+}
+
+.contacts-address {
+    margin-bottom: 20px;
+}
+
+.contacts-btn {
+    padding: 17px 44px 15px 44px;
+    border: none;
+    display: inline-block;
+    margin-top: 37px;
+}
+
+/*footer*/
+
+.footer-wrapper {
+    width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+}
+
+
+
+.social-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.social-item {
+    margin: 0;
+    padding: 0;
+}
+
+.social-item a {
+    background-color: var(--btngrey);
+    border-radius: 60px;
+}
+
+.social-item a:active img {
+    background-color: var(--active-red);
+    opacity: 0.3;
+}
+
+.social-item:nth-child(1) a {
+    padding: 33px 28px 33px 27px;
+    width: 26px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 9px;
+}
+
+.social-item:nth-child(2) a {
+    padding: 31px 34px 28px 35px;
+    display: inline-block;
+    height: 22px;
+    width: 12px;
+    margin-right: 9px;
+}
+
+.social-item:nth-child(3) a {
+    /*кривые паддинги*/
+    padding: 30px;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+}
+
+.action {
+    grid-column: 2/4;
+}
+
+.action-tagline {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0;
+}
+
+.action-text {
+    color: var(--footer-grey);
+    line-height: 24px;
+}
+
+/* Магазин */
+
+.main-headline {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    margin: 0;
+    padding: 78px 0 108px 0;
+}
+
+.headline-container {
+    background-color: var(--basic-grey);
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 40px;
+}
+
+/* Фильтр */
+
+.filter {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-headline {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price_field-headline {
+    margin-bottom: 48px;
+}
+
+.price_field-input {
+    background-color: var(--basic-grey);
+    border-radius: 3px;
+}
+
+/* Нужно сделать стили для инпутов и тд */
+.range-input {
+    color: var(--darktext);
+    background-color: var(--basic-grey);
+    border: none;
+    text-align: center;
+    padding: 8px 8px;
+}
+
+.grey-btn {
+    color: var(--basic-black);
+    background-color: var(--basic-grey);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.filter-btn {
+    padding: 17px 89px 15px 88px;
+    border: none;
+}
+
+.grey-btn:hover {
+    background-color: var(--btn-hover-grey);
+}
+
+.grey-btn:active {
+    background-color: var(--btn-active-grey);
+    color: var(--active-black-text);
+    box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+/* Сортировка */
+
+.sorting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    margin-bottom: 48px;
+}
+
+.sorting-headline {
+    margin: 0;
+}
+
+.sorting-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sorting-list-item {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.3;
+    display: inline-block;
+    width: auto;
+}
+
+.sorting-list-item:hover {
+    opacity: 0.6;
+}
+
+.sorting-list-item:active,
+.active-sorting-item {
+    opacity: 1;
+}
+
+/* Товары */
+
+.products-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-bottom: 54px;
+    padding: 0;
+}
+
+.products-description {
+    background-color: var(--basic-grey);
+    color: var(--basic-greytext);
+    line-height: 18px;
+    text-align: center;
+    padding: 26px 53px 44px 52px;
+}
+
+.products-description a {
+    display: inline-block;
+}
+
+.products-description p {
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.description-headline a {
+    color: var(--basic-black);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.description-headline a:hover {
+    color: var(--basic-red);
+}
+
+.description-headline a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+/* Ссылка после посещения */
+.description-headline {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+}
+
+.products-btn {
+    padding: 17px 72px 15px 72px;
+}
+
+/* Переключатель страниц */
+
+.page-switcher {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+.page-item {
+    margin-right: 11px;
+}
+
+.page-btn {
+    padding: 17px 20px 15px 20px;
+}
+
+.page-btn:not(.active-page) {
+    color: var(--basic-black);
+    background-color: var(--basic-grey);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.page-btn:hover:not(.active-page) {
+    background-color: var(--btn-hover-grey);
+}
+
+.page-btn:active:not(.active-page) {
+    background-color: var(--btn-active-grey);
+    color: var(--active-black-text);
+    box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+.active-page {
+    border: 2px solid var(--grey-border);
+    background-color: var(--active-page-btn);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.next-btn {
+    padding: 17px 77px 15px 78px;
+}
