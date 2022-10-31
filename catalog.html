@@ -188,6 +188,130 @@
                 <p class="action-text">Скидка 10% для друзей из социальных сетей.</p>
             </section>
         </div>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип комании">
+            </a>
+            <ul>
+                <li><a href="blank.html">Студия</a></li>
+                <li><a href="blank.html">Клиенты</a></li>
+                <li><a>Магазин</a></li>
+                <li><a href="blank.html">Контакты</a></li>
+            </ul>
+            <a href="blank.html"><img src="img/basket-icon.svg" width="15" height="15" alt="Иконка корзины">Корзина</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Магазин готовых шаблонов</h1>
+        <section>
+            <h2>Фильтр</h2>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+                <fieldset>
+                    <legend>Стоимость:</legend>
+                    <input type="range" id="priceslider" name="priceslider" min="0" max="150000" step="1">
+                    <p>
+                        <label>От <input type="text" name="min_price" value="0"></label>
+                        <label>До <input type="text" name="max_price" value="150000"></label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Сетка:</legend>
+                    <label><input type="radio" name="grid" value="adaptive" checked> Адаптивная</label>
+                    <label><input type="radio" name="grid" value="fixed"> Фиксированная</label>
+                    <label><input type="radio" name="grid" value="rubber"> Резиновая</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Особенности:</legend>
+                    <label><input type="checkbox" name="features" value="slider" checked> Слайдер</label>
+                    <label><input type="checkbox" name="features" value="advantages"> Блок преимуществ</label>
+                    <label><input type="checkbox" name="features" value="news" checked> Новости</label>
+                    <label><input type="checkbox" name="features" value="galery"> Галерея</label>
+                    <label><input type="checkbox" name="features" value="basket"> Корзина</label>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
+        </section>
+        <section>
+            <h2>Сортировка товаров</h2>
+            <p>Сортировать:</p>
+            <ul>
+                <li><a href="#"></a>По цене</li>
+                <li><a href="#"></a>По типу</li>
+                <li><a href="#"></a>По названию</li>
+            </ul>
+            <ul>
+                <li><a href="#"></a><img src="img/icon-down.svg" alt="Стрелка вниз"></li>
+                <li><a href="#"></a><img src="img/icon-up.svg" alt="Стрелка вверх"></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Товары</h2>
+            <ul>
+                <li>
+                    <h3><a href="#">Sedona</a></h3>
+                    <p>Информационный сайт для туристов</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/sedona.png" alt="Пример сайта sedona" width="359" height="578">
+                </li>
+                <li>
+                    <h3><a href="#">Pink</a></h3>
+                    <p>Продуктовый лендингприложения для iOS и Android</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/pink.png" alt="Пример сайта pink" width="359" height="578">
+                </li>
+                <li>
+                    <h3><a href="#">Barbershop</a></h3>
+                    <p>Сайт салона красоты.Для мужчин, да.</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/barbershop.png" alt="Пример сайта barbershop" width="359" height="578">
+                </li>
+                <li>
+                    <h3><a href="#">Mishki</a></h3>
+                    <p>Интернет-магазин вязаных игрушек</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/mishka.png" alt="Пример сайта mishki" width="359" height="578">
+                </li>
+                <li>
+                    <h3><a href="#">A plus</a></h3>
+                    <p>Лендинг курсов повышения квалификации</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/aplus.png" alt="Пример сайта aplus" width="359" height="578">
+                </li>
+                <li>
+                    <h3><a href="#">Kbact</a></h3>
+                    <p>Промо-сайт производителякрафтового кваса</p>
+                    <a href="#">9 900 &#8381;</a>
+                    <img src="img/kvast.png" alt="Пример сайта kvast" width="359" height="578">
+                </li>
+            </ul>
+            <ul>
+                <li><a>1</a></li>
+                <li><a href="#"></a>2</li>
+                <li><a href="#"></a>3</li>
+                <li><a href="#"></a>Следующая</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Контакты</h2>
+            <p>NЁRDS DESIGN STUDIO</p>
+            <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
+            <a href="tel:+78005558628;">+7 800 555-86-28</a>
+            <button type="button">Напишите нам</button>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="vk"><img src="img/vk-icon.svg" width="26" height="15" alt="vk icon"></a></li>
+            <li><a href="fb"><img src="img/fb-icon.svg" width="12" height="22" alt="fb icon"></a></li>
+            <li><a href="insta"><img src="img/insta-icon.svg" width="21" height="21" alt="insta icon"></a></li>
+        </ul>
+        <p>Давайте дружить, это выгодно!</p>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
 </body>
 
