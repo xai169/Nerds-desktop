@@ -696,12 +696,29 @@ img {
     padding: 0;
 }
 
-.products-description {
+.products-description{
+    box-sizing: border-box;
     background-color: var(--basic-grey);
     color: var(--basic-greytext);
     line-height: 18px;
     text-align: center;
     padding: 26px 53px 44px 52px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    
+}
+
+.products-item {
+    position: relative;
+}
+
+.products-description {
+    display: none;
+}
+
+.products-item:hover .products-description {
+    display: block;
 }
 
 .products-description a {
