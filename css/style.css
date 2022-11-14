@@ -606,8 +606,23 @@ img {
 .price_field-input {
     background-color: var(--basic-grey);
     border-radius: 3px;
+    width: 100%;
 }
 
+.price_field-container {
+    background-color: var(--basic-grey);
+    border-radius: 3px;
+    padding: 39px 18px;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.price-container {
+    display: flex;
+    width: 260px;
+    flex-wrap: wrap;
+    margin-bottom: 54px;
+}
 /* Нужно сделать стили для инпутов и тд */
 .range-input {
     color: var(--darktext);
@@ -615,6 +630,17 @@ img {
     border: none;
     text-align: center;
     padding: 8px 8px;
+    width: 80px;
+    box-sizing: border-box;
+    margin-left: 11px;
+}
+
+.range-label:last-of-type .range-input {
+    margin-left: 12px;
+}
+
+.range-label:first-of-type {
+   margin-right: 33px;
 }
 
 .grey-btn {
@@ -641,6 +667,26 @@ img {
     background-color: var(--btn-active-grey);
     color: var(--active-black-text);
     box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+.filter-grid {
+    margin-bottom: 47px;
+}
+
+.filter-specials {
+    margin-bottom: 48px;
+}
+
+.grid-headline, .specials-headline {
+    margin-bottom: 16px;
+}
+
+.grid-input {
+    margin-bottom: 15px;
+}
+
+.specials-input {
+    margin-bottom: 17px;
 }
 
 /* Сортировка */

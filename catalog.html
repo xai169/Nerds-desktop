@@ -47,19 +47,21 @@
                     <form action="https://echo.htmlacademy.ru/" method="post">
                         <fieldset class="filter filter-price_field">
                             <legend class="filter-headline price_field-headline">Стоимость:</legend>
-                            <input type="range" id="priceslider" name="priceslider" min="0" max="150000" step="1"
-                                class="price_field-input">
-                            <p class="price_field-range">
-                                <label class="range-label text-uppercase">От <input type="text" name="min_price"
-                                        value="0" class="range-input"></label><br>
-                                <label class="range-label text-uppercase">До <input type="text" name="max_price"
-                                        value="150000" class="range-input"></label>
-                            </p>
+                            <div class="price-container">
+                                <div class="price_field-container"><input type="range" id="priceslider"
+                                        name="priceslider" min="0" max="150000" step="1" class="price_field-input">
+                                </div>
+                                <label class="range-label text-uppercase">От<input type="text" name="min_price"
+                                        value="0" class="range-input"></label>
+                                <label class="range-label text-uppercase">До<input type="text" name="max_price"
+                                        value="150 000" class="range-input"></label>
+                            </div>
                         </fieldset>
                         <fieldset class="filter filter-grid">
                             <legend class="filter-headline grid-headline">Сетка:</legend>
                             <label class="grid-label"><input type="radio" name="grid" value="adaptive"
-                                    class="grid-input" checked> Адаптивная</label><br>
+                                    class="grid-input" checked>
+                                Адаптивная</label><br>
                             <label class="grid-label"><input type="radio" name="grid" value="fixed" class="grid-input">
                                 Фиксированная</label><br>
                             <label class="grid-label"><input type="radio" name="grid" value="rubber" class="grid-input">
