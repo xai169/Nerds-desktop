@@ -584,6 +584,11 @@ img {
     column-gap: 40px;
 }
 
+.act-page {
+    border-bottom: 2px solid var(--basic-red);
+    padding-bottom: 13px;
+}
+
 /* Фильтр */
 
 .filter {
@@ -707,7 +712,6 @@ img {
     display: flex;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -719,6 +723,15 @@ img {
     opacity: 0.3;
     display: inline-block;
     width: auto;
+    margin-right: 25px;
+}
+
+.sorting-list-item:nth-child(3) {
+    margin-right: 42px;
+}
+
+.sorting-list-item:last-child {
+    margin: 0;
 }
 
 .sorting-list-item:hover {
@@ -728,6 +741,10 @@ img {
 .sorting-list-item:active,
 .active-sorting-item {
     opacity: 1;
+}
+
+.arrow-up {
+    margin-right: 14px;
 }
 
 /* Товары */
