@@ -48,9 +48,18 @@
                         <fieldset class="filter filter-price_field">
                             <legend class="filter-headline price_field-headline">Стоимость:</legend>
                             <div class="price-container">
-                                <div class="price_field-container"><input type="range" id="priceslider"
-                                        name="priceslider" min="0" max="150000" step="1" class="price_field-input">
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar" style="
+                                        width: 70%;
+                                        margin-left: 0%"></div>
+                                    </div>
+                                    <div class="toggle toggle-min" style="left:0%" tabindex="0"></div>
+                                    <div class="toggle toggle-max" style="left:60%" tabindex="0"></div>
                                 </div>
+                                <!-- <div class="price_field-container"><input type="range" id="priceslider"
+                                        name="priceslider" min="0" max="150000" step="1" class="price_field-input">
+                                </div> -->
                                 <label class="range-label text-uppercase">От<input type="text" name="min_price"
                                         value="0" class="range-input"></label>
                                 <label class="range-label text-uppercase">До<input type="text" name="max_price"

@@ -52,7 +52,9 @@
     --active-black-text: rgba(1, 1, 1, 0.3);
     --grey-border: #DBDBDB;
     --active-page-btn: rgba(0, 0, 0, 0.0001);
-
+    --light-green: #00CA74;
+    --filter-grey: #D7DCDF;
+    --filter-darkgrey:  #ABABAB;
 }
 
 /*общие*/
@@ -412,6 +414,7 @@ img {
     border-bottom: 2px solid var(--basic-grey);
     border-top: 2px solid var(--basic-grey);
     padding: 46px 0 44px 0;
+    margin-bottom: 80px;
 }
 
 .partners-list {
@@ -422,11 +425,28 @@ img {
     margin: 0;
 }
 
-/* .partners-item::after { 
-    /*Пытаюсь сделать правильные рамки у элементов*
-    content: url("../img/list-border.png");
+.partners-item {
+    display: block;
+    align-self: center;
+    position: relative;
     padding-left: 45px;
-    vertical-align: 20%;
+}
+
+.partners-item:not(:last-child) {
+    background-image: url("../img/list-border.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+/* .partners-item::after { 
+    /*Пытаюсь сделать правильные рамки у элементов*/
+    /* content: url("../img/list-border.png"); 
+    content: "";
+    width: 2px;
+    height: 52px;
+    color: black;
+    position: absolute;
+    top: 10px;
 } */
 
 .partners-item a:link {
@@ -614,13 +634,58 @@ img {
     width: 100%;
 }
 
-.price_field-container {
+.range-controls {
+    position: relative;
+    height: 41px;
+    width: 260px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 3px;
+    background-color: var(--basic-grey);
+    margin-bottom: 14px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: var(--filter-grey);
+}
+
+.range-controls .bar {
+    height: 2px;
+    background-color: var(--light-green);
+    width: 70%;
+}
+
+.range-controls .toggle {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: solid 8px var(--basic-white);
+    background-color: var(--filter-darkgrey);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    cursor: pointer;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.range-controls .toggle-min {
+    left: 18px;
+}
+
+/* .price_field-container {
     background-color: var(--basic-grey);
     border-radius: 3px;
     padding: 39px 18px;
     width: 100%;
     margin-bottom: 14px;
-}
+} */
 
 .price-container {
     display: flex;
@@ -638,6 +703,11 @@ img {
     width: 80px;
     box-sizing: border-box;
     margin-left: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .range-label:last-of-type .range-input {
@@ -774,6 +844,10 @@ img {
 
 .products-item {
     position: relative;
+}
+
+.products-item img {
+    filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25));
 }
 
 .products-description {
