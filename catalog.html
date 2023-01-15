@@ -20,7 +20,7 @@
     <header class="page-header">
         <nav class="page-navigation">
             <div class="page-navigation-wrapper">
-                <a href="#" class="page-logo">
+                <a href="index.html" class="page-logo">
                     <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип комании">
                 </a>
                 <ul class="site-navigation">
@@ -68,13 +68,30 @@
                         </fieldset>
                         <fieldset class="filter filter-grid">
                             <legend class="filter-headline grid-headline">Сетка:</legend>
-                            <label class="grid-label"><input type="radio" name="grid" value="adaptive"
-                                    class="grid-input" checked>
-                                Адаптивная</label><br>
-                            <label class="grid-label"><input type="radio" name="grid" value="fixed" class="grid-input">
-                                Фиксированная</label><br>
-                            <label class="grid-label"><input type="radio" name="grid" value="rubber" class="grid-input">
-                                Резиновая</label><br>
+                            <ul class="filter-list">
+                                <li class="filter-option"><input type="radio" name="adaptive" value="adaptive"
+                                        class="grid-input visually-hidden" checked>
+                                    <label for="adaptive" class="grid-label">Адаптивная</label><br>
+                                </li>
+
+                                <li class="filter-option"><input type="radio" name="fixed" value="fixed"
+                                        class="grid-input visually-hidden">
+                                    <label for="fixed" class="grid-label">Фиксированная</label><br>
+                                </li>
+
+                                <li class="filter-option"><input type="radio" name="rubber" value="rubber"
+                                        class="grid-input visually-hidden">
+                                    <label for="grid" class="grid-label">Резиновая</label><br>
+                                </li>
+                                <!-- <li class="filter-option">
+                                    <label class="grid-label"><input type="radio" name="grid" value="fixed"
+                                            class="grid-input visually-hidden">
+                                        Фиксированная</label><br>
+                                </li>
+                                <li class="filter-option"><label class="grid-label"><input type="radio" name="grid"
+                                            value="rubber" class="grid-input visually-hidden">
+                                        Резиновая</label><br></li> -->
+                            </ul>
                         </fieldset>
                         <fieldset class="filter filter-specials">
                             <legend class="filter-headline specials-headline">Особенности:</legend>
