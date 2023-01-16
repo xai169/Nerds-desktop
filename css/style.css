@@ -776,7 +776,7 @@ img {
     user-select: none;
 }
 
-.grid-label::before {
+.grid-input + label::before {
     content: "";
     position: absolute;
     left: -36px;
@@ -789,7 +789,7 @@ img {
     box-sizing: border-box;
 }
 
-.grid-input:checked + .grid-label::after {
+.grid-input:checked + label::after {
     content: "";
     position: absolute;
     left: -28px;
