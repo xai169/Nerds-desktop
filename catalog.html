@@ -20,13 +20,13 @@
     <header class="page-header">
         <nav class="page-navigation">
             <div class="page-navigation-wrapper">
-                <a href="#" class="page-logo">
+                <a href="index.html" class="page-logo">
                     <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип комании">
                 </a>
                 <ul class="site-navigation">
                     <li class="site-navigation-item"><a href="blank.html">Студия</a></li>
                     <li class="site-navigation-item"><a href="blank.html">Клиенты</a></li>
-                    <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
+                    <li class="site-navigation-item"><a href="catalog.html" class="act-page">Магазин</a></li>
                     <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
                 </ul>
                 <a href="blank.html" class="cart-link"><img src="img/basket-icon.svg" width="15" height="15"
@@ -47,23 +47,51 @@
                     <form action="https://echo.htmlacademy.ru/" method="post">
                         <fieldset class="filter filter-price_field">
                             <legend class="filter-headline price_field-headline">Стоимость:</legend>
-                            <input type="range" id="priceslider" name="priceslider" min="0" max="150000" step="1"
-                                class="price_field-input">
-                            <p class="price_field-range">
-                                <label class="range-label text-uppercase">От <input type="text" name="min_price"
-                                        value="0" class="range-input"></label><br>
-                                <label class="range-label text-uppercase">До <input type="text" name="max_price"
-                                        value="150000" class="range-input"></label>
-                            </p>
+                            <div class="price-container">
+                                <div class="range-controls">
+                                    <div class="scale">
+                                        <div class="bar" style="
+                                        width: 70%;
+                                        margin-left: 0%"></div>
+                                    </div>
+                                    <div class="toggle toggle-min" style="left:0%" tabindex="0"></div>
+                                    <div class="toggle toggle-max" style="left:60%" tabindex="0"></div>
+                                </div>
+                                <!-- <div class="price_field-container"><input type="range" id="priceslider"
+                                        name="priceslider" min="0" max="150000" step="1" class="price_field-input">
+                                </div> -->
+                                <label class="range-label text-uppercase">От<input type="text" name="min_price"
+                                        value="0" class="range-input"></label>
+                                <label class="range-label text-uppercase">До<input type="text" name="max_price"
+                                        value="150 000" class="range-input"></label>
+                            </div>
                         </fieldset>
                         <fieldset class="filter filter-grid">
                             <legend class="filter-headline grid-headline">Сетка:</legend>
-                            <label class="grid-label"><input type="radio" name="grid" value="adaptive"
-                                    class="grid-input" checked> Адаптивная</label><br>
-                            <label class="grid-label"><input type="radio" name="grid" value="fixed" class="grid-input">
-                                Фиксированная</label><br>
-                            <label class="grid-label"><input type="radio" name="grid" value="rubber" class="grid-input">
-                                Резиновая</label><br>
+                            <ul class="filter-list">
+                                <li class="filter-option"><input type="radio" name="adaptive" value="adaptive"
+                                        class="grid-input visually-hidden" checked>
+                                    <label for="adaptive" class="grid-label">Адаптивная</label><br>
+                                </li>
+
+                                <li class="filter-option"><input type="radio" name="fixed" value="fixed"
+                                        class="grid-input visually-hidden">
+                                    <label for="fixed" class="grid-label">Фиксированная</label><br>
+                                </li>
+
+                                <li class="filter-option"><input type="radio" name="rubber" value="rubber"
+                                        class="grid-input visually-hidden">
+                                    <label for="grid" class="grid-label">Резиновая</label><br>
+                                </li>
+                                <!-- <li class="filter-option">
+                                    <label class="grid-label"><input type="radio" name="grid" value="fixed"
+                                            class="grid-input visually-hidden">
+                                        Фиксированная</label><br>
+                                </li>
+                                <li class="filter-option"><label class="grid-label"><input type="radio" name="grid"
+                                            value="rubber" class="grid-input visually-hidden">
+                                        Резиновая</label><br></li> -->
+                            </ul>
                         </fieldset>
                         <fieldset class="filter filter-specials">
                             <legend class="filter-headline specials-headline">Особенности:</legend>
@@ -90,16 +118,21 @@
                         <li class="sorting-list-item active-sorting-item"><a href="#"></a>По цене</li>
                         <li class="sorting-list-item"><a href="#"></a>По типу</li>
                         <li class="sorting-list-item"><a href="#"></a>По названию</li>
-                        <li class="sorting-list-item"><a href="#"></a><img src="img/icon-down.svg" alt="Стрелка вниз">
-                        </li>
-                        <li class="sorting-list-item"><a href="#"></a><img src="img/icon-up.svg" alt="Стрелка вверх">
-                        </li>
+                        <div class="arrows">
+                            <li class="sorting-list-item active-sorting-item arrow-up"><a href="#"></a><img
+                                    src="img/icon-down.svg" alt="Стрелка вниз">
+                            </li>
+                            <li class="sorting-list-item arrow-down"><a href="#"></a><img src="img/icon-up.svg"
+                                    alt="Стрелка вверх">
+                            </li>
+                        </div>
                     </ul>
                 </section>
                 <section class="products">
                     <h2 class="visually-hidden">Товары</h2>
                     <ul class="products-list">
                         <li class="products-item">
+
                             <img src="img/sedona.png" alt="Пример сайта sedona" width="359" height="578">
                             <div class="products-description">
                                 <h3 class="description-headline"><a href="#">Sedona</a></h3>

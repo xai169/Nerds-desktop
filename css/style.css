@@ -52,7 +52,9 @@
     --active-black-text: rgba(1, 1, 1, 0.3);
     --grey-border: #DBDBDB;
     --active-page-btn: rgba(0, 0, 0, 0.0001);
-
+    --light-green: #00CA74;
+    --filter-grey: #D7DCDF;
+    --filter-darkgrey:  #ABABAB;
 }
 
 /*общие*/
@@ -412,6 +414,7 @@ img {
     border-bottom: 2px solid var(--basic-grey);
     border-top: 2px solid var(--basic-grey);
     padding: 46px 0 44px 0;
+    margin-bottom: 80px;
 }
 
 .partners-list {
@@ -422,11 +425,28 @@ img {
     margin: 0;
 }
 
-/* .partners-item::after { 
-    /*Пытаюсь сделать правильные рамки у элементов*
-    content: url("../img/list-border.png");
+.partners-item {
+    display: block;
+    align-self: center;
+    position: relative;
     padding-left: 45px;
-    vertical-align: 20%;
+}
+
+.partners-item:not(:last-child) {
+    background-image: url("../img/list-border.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+/* .partners-item::after { 
+    /*Пытаюсь сделать правильные рамки у элементов*/
+    /* content: url("../img/list-border.png"); 
+    content: "";
+    width: 2px;
+    height: 52px;
+    color: black;
+    position: absolute;
+    top: 10px;
 } */
 
 .partners-item a:link {
@@ -584,6 +604,11 @@ img {
     column-gap: 40px;
 }
 
+.act-page {
+    border-bottom: 2px solid var(--basic-red);
+    padding-bottom: 13px;
+}
+
 /* Фильтр */
 
 .filter {
@@ -606,8 +631,68 @@ img {
 .price_field-input {
     background-color: var(--basic-grey);
     border-radius: 3px;
+    width: 100%;
 }
 
+.range-controls {
+    position: relative;
+    height: 41px;
+    width: 260px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 3px;
+    background-color: var(--basic-grey);
+    margin-bottom: 14px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: var(--filter-grey);
+}
+
+.range-controls .bar {
+    height: 2px;
+    background-color: var(--light-green);
+    width: 70%;
+}
+
+.range-controls .toggle {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: solid 8px var(--basic-white);
+    background-color: var(--filter-darkgrey);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    cursor: pointer;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.range-controls .toggle-min {
+    left: 18px;
+}
+
+/* .price_field-container {
+    background-color: var(--basic-grey);
+    border-radius: 3px;
+    padding: 39px 18px;
+    width: 100%;
+    margin-bottom: 14px;
+} */
+
+.price-container {
+    display: flex;
+    width: 260px;
+    flex-wrap: wrap;
+    margin-bottom: 54px;
+}
 /* Нужно сделать стили для инпутов и тд */
 .range-input {
     color: var(--darktext);
@@ -615,6 +700,22 @@ img {
     border: none;
     text-align: center;
     padding: 8px 8px;
+    width: 80px;
+    box-sizing: border-box;
+    margin-left: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.range-label:last-of-type .range-input {
+    margin-left: 12px;
+}
+
+.range-label:first-of-type {
+   margin-right: 33px;
 }
 
 .grey-btn {
@@ -643,6 +744,76 @@ img {
     box-shadow: inset 0px 3px 0px var(--shadow-grey);
 }
 
+.filter-grid {
+    margin-bottom: 47px;
+}
+
+.filter-specials {
+    margin-bottom: 48px;
+}
+
+.grid-headline, .specials-headline {
+    margin-bottom: 16px;
+}
+
+.filter-list {
+    padding: 0;
+    margin: 0;
+}
+
+.filter-option {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-bottom: 15px;
+    padding-left: 36px;
+}
+
+.grid-label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.grid-label::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 1px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid var(--basic-greytext);
+    opacity: 0.4;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.grid-input:checked + .grid-label::after {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 9px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--basic-greytext);
+    opacity: 0.4;
+}
+
+.grid-label:hover::before, .grid-input:checked + .grid-label:hover::after {
+    opacity: 1;
+}
+
+/* .grid-input {
+    margin-bottom: 15px;
+    margin-right: 5px;
+} */
+
+.specials-input {
+    margin-bottom: 17px;
+}
+
 /* Сортировка */
 
 .sorting {
@@ -661,7 +832,6 @@ img {
     display: flex;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -673,6 +843,16 @@ img {
     opacity: 0.3;
     display: inline-block;
     width: auto;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.sorting-list-item:nth-child(3) {
+    margin-right: 42px;
+}
+
+.sorting-list-item:last-child {
+    margin: 0;
 }
 
 .sorting-list-item:hover {
@@ -682,6 +862,10 @@ img {
 .sorting-list-item:active,
 .active-sorting-item {
     opacity: 1;
+}
+
+.arrow-up {
+    margin-right: 14px;
 }
 
 /* Товары */
@@ -696,12 +880,33 @@ img {
     padding: 0;
 }
 
-.products-description {
+.products-description{
+    box-sizing: border-box;
     background-color: var(--basic-grey);
     color: var(--basic-greytext);
     line-height: 18px;
     text-align: center;
     padding: 26px 53px 44px 52px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    
+}
+
+.products-item {
+    position: relative;
+}
+
+.products-item img {
+    filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.25));
+}
+
+.products-description {
+    display: none;
+}
+
+.products-item:hover .products-description {
+    display: block;
 }
 
 .products-description a {
