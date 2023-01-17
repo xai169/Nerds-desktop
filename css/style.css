@@ -759,17 +759,25 @@ img {
 .filter-list {
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 .filter-option {
     padding: 0;
     margin: 0;
-    list-style-type: none;
     margin-bottom: 15px;
     padding-left: 36px;
 }
 
-.grid-label {
+.filter-specials-option {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 17px;
+    padding-left: 36px;
+}
+
+.grid-label,
+.specials-label {
     display: block;
     cursor: pointer;
     position: relative;
@@ -801,7 +809,32 @@ img {
     opacity: 0.4;
 }
 
-.grid-label:hover::before, .grid-input:checked + .grid-label:hover::after {
+.specials-input:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 1px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    opacity: 0.4;
+}
+
+.specials-input:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 1px;
+    width: 25px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    opacity: 0.4;
+}
+
+.grid-label:hover::before, 
+.grid-input:checked + .grid-label:hover::after,
+.specials-input:not(:checked) + label:hover::before,
+.specials-input:checked + label:hover::after {
     opacity: 1;
 }
 
@@ -895,6 +928,8 @@ img {
 
 .products-item {
     position: relative;
+    border-top: 40px solid var(--basic-dark-grey);
+    border-radius: 4px;
 }
 
 .products-item img {

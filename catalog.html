@@ -61,9 +61,9 @@
                                         name="priceslider" min="0" max="150000" step="1" class="price_field-input">
                                 </div> -->
                                 <label class="range-label text-uppercase">От<input type="text" name="min_price"
-                                        value="0" class="range-input"></label>
+                                        value="0" class="range-input" maxlength="7"></label>
                                 <label class="range-label text-uppercase">До<input type="text" name="max_price"
-                                        value="150 000" class="range-input"></label>
+                                        value="150 000" class="range-input" maxlength="7"></label>
                             </div>
                         </fieldset>
                         <fieldset class="filter filter-grid">
@@ -90,16 +90,33 @@
                         </fieldset>
                         <fieldset class="filter filter-specials">
                             <legend class="filter-headline specials-headline">Особенности:</legend>
-                            <label class="specials-label"><input type="checkbox" name="features" value="slider"
-                                    class="specials-input" checked> Слайдер</label><br>
-                            <label class="specials-label"><input type="checkbox" name="features" value="advantages"
-                                    class="specials-input"> Блок преимуществ</label><br>
-                            <label class="specials-label"><input type="checkbox" name="features" value="news"
-                                    class="specials-input" checked> Новости</label><br>
-                            <label class="specials-label"><input type="checkbox" name="features" value="galery"
-                                    class="specials-input"> Галерея</label><br>
-                            <label class="specials-label"><input type="checkbox" name="features" value="basket"
-                                    class="specials-input"> Корзина</label><br>
+                            <ul class="filter-list">
+                                <li class="filter-specials-option">
+                                    <input type="checkbox" name="features" value="slider"
+                                        class="specials-input visually-hidden" id="slider" checked>
+                                    <label for="slider" class="specials-label">Слайдер</label>
+                                </li>
+                                <li class="filter-specials-option">
+                                    <input type="checkbox" name="features" value="advantages"
+                                        class="specials-input visually-hidden" id="advantages">
+                                    <label for="advantages" class="specials-label">Блок преимуществ</label>
+                                </li>
+                                <li class="filter-specials-option">
+                                    <input type="checkbox" name="features" value="news"
+                                        class="specials-input visually-hidden" id="news" checked>
+                                    <label for="news" class="specials-label">Новости</label>
+                                </li>
+                                <li class="filter-specials-option">
+                                    <input type="checkbox" name="features" value="galery"
+                                        class="specials-input visually-hidden" id="galery">
+                                    <label for="galery" class="specials-label">Галерея</label>
+                                </li>
+                                <li class="filter-specials-option">
+                                    <input type="checkbox" name="features" value="basket"
+                                        class="specials-input visually-hidden" id="basket">
+                                    <label for="basket" class="specials-label">Корзина</label>
+                                </li>
+                            </ul>
                         </fieldset>
                         <button type="submit" class="grey-btn filter-btn">Показать</button>
                     </form>
@@ -127,7 +144,6 @@
                     <h2 class="visually-hidden">Товары</h2>
                     <ul class="products-list">
                         <li class="products-item">
-
                             <img src="img/sedona.png" alt="Пример сайта sedona" width="359" height="578">
                             <div class="products-description">
                                 <h3 class="description-headline"><a href="#">Sedona</a></h3>
