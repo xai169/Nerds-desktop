@@ -930,6 +930,18 @@ img {
     position: relative;
     border-top: 40px solid var(--basic-dark-grey);
     border-radius: 4px;
+    opacity: 1;
+}
+
+.products-item::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 14px;
+    background-image: url("../img/product-circle.png");
+    background-repeat: repeat;
+    left: 0px;
+    top: 0px;
 }
 
 .products-item img {
