@@ -55,6 +55,7 @@
     --light-green: #00CA74;
     --filter-grey: #D7DCDF;
     --filter-darkgrey:  #ABABAB;
+    --border-lightgrey: rgba(77, 77, 77, 0.12);
 }
 
 /*общие*/
@@ -928,20 +929,25 @@ img {
 
 .products-item {
     position: relative;
-    border-top: 40px solid var(--basic-dark-grey);
+    border-top: 40px solid var(--border-lightgrey);
     border-radius: 4px;
-    opacity: 1;
+    
+}
+
+.products-item:hover {
+    border-color: var(--basic-dark-grey);
 }
 
 .products-item::before {
     content: '';
     position: absolute;
-    width: 60px;
+    width: 14px;
     height: 14px;
-    background-image: url("../img/product-circle.png");
-    background-repeat: repeat;
-    left: 0px;
-    top: 0px;
+    border-radius: 50%;
+    background-color: var(--basic-white);
+    left: 16px;
+    top: -28px;
+    box-shadow: 23px 0 var(--basic-white), 46px 0 var(--basic-white);
 }
 
 .products-item img {
