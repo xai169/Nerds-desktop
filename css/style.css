@@ -194,6 +194,10 @@ img {
     margin-right: 25px;
 }
 
+.basket:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .site-navigation a:hover,
 .cart-link:hover {
     color: var(--active-red);
@@ -220,7 +224,6 @@ img {
 .slider-btn:hover,
 .web-btn:hover,
 .contacts-btn:hover,
-.social-item a:hover,
 .popup-btn:hover {
     background-color: var(--hover-red);
 }
@@ -228,7 +231,6 @@ img {
 .slider-btn:active,
 .web-btn:active,
 .contacts-btn:active,
-.social-item a:active,
 .popup-btn:active {
     background-color: var(--active-red);
     color: var(--white-active);
@@ -318,6 +320,24 @@ img {
     column-gap: 100px;
     padding-right: 60px;
     margin-bottom: 80px;
+}
+
+.services-web {
+    background: url("../img/web.png");
+    width: 300px;
+    height: 146px;
+}
+
+.services-app {
+    background: url("../img/app.png");
+    width: 300px;
+    height: 146px;
+}
+
+.services-presentation {
+    background: url("../img/presentation.png");
+    width: 300px;
+    height: 146px;
 }
 
 .services-card {
@@ -428,6 +448,16 @@ img {
 }
 
 /*statistics*/
+
+.statistics {
+    background: url("../img/nerds-color-logo.png") no-repeat;
+}
+
+.statistics-background {
+    background: url("../img/nerds-color-logo.png") no-repeat;
+    width: 360px;
+    height: 208px;
+}
 
 .statistics-list-head {
     font-weight: 700;
@@ -571,6 +601,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
+    margin-bottom: 68px;
 }
 
 
@@ -589,12 +620,20 @@ img {
 }
 
 .social-item a {
-    background-color: var(--btngrey);
+    background: linear-gradient(0deg, var(--btngrey), var(--btngrey)), var(--basic-white);
     border-radius: 60px;
 }
 
-.social-item a:active img {
-    background-color: var(--active-red);
+.social-item a:hover {
+    background: linear-gradient(0deg, var( --hover-red), var( --hover-red)), var(--basic-white);
+}
+
+.social-item a:active {
+    background: linear-gradient(0deg, var(--active-red), var(--active-red)),  var(--basic-white);
+    box-shadow: inset 0px 3px 0px var(--shadow-grey);
+}
+
+.social-item a:active svg {
     opacity: 0.3;
 }
 
@@ -1194,4 +1233,28 @@ img {
 .popup-input:invalid{
     color: var(--hover-red);
     border-color: var(--hover-red);
+}
+
+.popup-cross {
+    position: relative;
+}
+
+.popup-cross::before {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 15px;
+    width: 21px;
+    height: 21px;
+    background: url("../img/popup-cross.svg");
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.popup-cross:hover::before {
+    opacity: 1;
+}
+
+.popup-cross:active::before {
+    opacity: 0.1;
 }
