@@ -74,7 +74,7 @@
     background-color: var(--basic-white);
     min-height: 100%;
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: 114px 1fr min-content;
     align-content: start;
     position: relative;
 }
@@ -127,7 +127,7 @@ img {
     margin: 0 auto;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
-    padding-top: 49px;
+    padding-top: 47px;
 }
 
 .main-slider-wrapper {
@@ -163,6 +163,10 @@ img {
     line-height: 30px;
 }
 
+.page-logo {
+    max-height: 65px;
+}
+
 .page-logo:hover {
     opacity: 0.7;
 }
@@ -178,6 +182,7 @@ img {
 
 .site-navigation-item {
     margin-right: 45px;
+    padding-top: 20px;
 }
 
 .page-navigation a {
@@ -187,7 +192,7 @@ img {
 }
 
 .cart-link {
-    align-self: center;
+   padding-top: 26px;
 }
 
 .cart-link img {
@@ -217,8 +222,9 @@ img {
 }
 
 .slider-btn {
-    padding: 16px 54px;
+    padding: 17px 54px 15px 54px;
     display: inline-block;
+    line-height: 18px;
 }
 
 .slider-btn:hover,
@@ -245,13 +251,14 @@ img {
 }
 
 .slider-item p:nth-child(2) {
+    font-weight: 400;
     line-height: 24px;
-    margin: 0 0 38px 0;
+    margin: 0 0 37px 0;
     color: var(--darktext);
 }
 
 .bg-phone {
-    background: url("../img/slide-1.png") no-repeat right;
+    background: url("../img/slide-1.png") no-repeat 0 100px;
     height: 430px;
 
 }
