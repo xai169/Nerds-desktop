@@ -222,7 +222,7 @@ img {
 }
 
 .slider-btn {
-    padding: 17px 54px 15px 54px;
+    padding: 17px 56px 15px 54px;
     display: inline-block;
     line-height: 18px;
 }
@@ -253,7 +253,7 @@ img {
 .slider-item p:nth-child(2) {
     font-weight: 400;
     line-height: 24px;
-    margin: 0 0 37px 0;
+    margin: 0 0 40px 0;
     color: var(--darktext);
 }
 
@@ -368,14 +368,14 @@ img {
 
 .services-card p {
     color: var(--darktext);
-    margin-bottom: 32px;
+    margin-bottom: 34px;
     margin-top: 0;
 }
 
 .web-btn,
 .app-btn,
 .presentation-btn {
-    padding: 17px 40px 15px 39px;
+    padding: 17px 41px 15px 39px;
     display: inline-block;
     font-weight: 500;
     font-size: 16px;
@@ -635,7 +635,7 @@ img {
 
 .contacts {
     background: url("../img/map.png") no-repeat center;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
     min-height: 416px;
 }
 
@@ -643,7 +643,7 @@ img {
     background-color: var(--basic-white);
     display: flex;
     flex-direction: column;
-    padding: 50px 50px 50px 50px;
+    padding: 47px 50px 50px 50px;
     width: 319px;
     height: 308px;
     margin-right: auto;
@@ -666,14 +666,14 @@ img {
 }
 
 .contacts-address {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
 }
 
 .contacts-btn {
-    padding: 17px 44px 15px 44px;
+    padding: 17px 44px 15px 43px;
     border: none;
     display: inline-block;
-    margin-top: 37px;
+    margin-top: 35px;
 }
 
 /*footer*/
@@ -694,7 +694,7 @@ img {
     padding: 0;
     display: flex;
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .social-item {
@@ -704,7 +704,7 @@ img {
 
 .social-item a {
     background: linear-gradient(0deg, var(--btngrey), var(--btngrey)), var(--basic-white);
-    border-radius: 60px;
+    border-radius: 50%;
 }
 
 .social-item a:hover {
@@ -721,24 +721,24 @@ img {
 }
 
 .social-item:nth-child(1) a {
-    padding: 33px 28px 33px 27px;
+    padding: 32px 27px 32px 26px;
     width: 26px;
     height: 15px;
     display: inline-block;
-    margin-right: 9px;
+    margin-right: 11px;
 }
 
 .social-item:nth-child(2) a {
-    padding: 31px 34px 28px 35px;
+    padding: 30px 33px 27px 35px;
     display: inline-block;
     height: 22px;
     width: 12px;
-    margin-right: 9px;
+    margin-right: 11px;
 }
 
 .social-item:nth-child(3) a {
     /*кривые паддинги*/
-    padding: 30px;
+    padding: 29px;
     width: 21px;
     height: 21px;
     display: inline-block;
@@ -753,11 +753,14 @@ img {
     font-weight: 700;
     line-height: 36px;
     margin: 0;
+    margin-top: 7px;
 }
 
 .action-text {
     color: var(--footer-grey);
     line-height: 24px;
+    margin: 0;
+    margin-top: 10px;
 }
 
 /* Магазин */
@@ -779,12 +782,21 @@ img {
 .main-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 40px;
+    column-gap: 22px;
 }
 
 .act-page {
-    border-bottom: 2px solid var(--basic-red);
-    padding-bottom: 13px;
+    /* border-bottom: 2px solid var(--basic-red);
+    padding-bottom: 13px; */
+    position: relative;
+}
+.act-page::before {
+    content: '';
+    position: absolute;
+    width: 74px;
+    height: 2px;
+    bottom: -21px;
+    background-color: var(--basic-red);
 }
 
 /* Фильтр */
@@ -923,11 +935,11 @@ img {
 }
 
 .filter-grid {
-    margin-bottom: 47px;
+    margin-bottom: 28px;
 }
 
 .filter-specials {
-    margin-bottom: 48px;
+    margin-bottom: 35px;
 }
 
 .grid-headline, .specials-headline {
@@ -950,7 +962,7 @@ img {
 .filter-specials-option {
     padding: 0;
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     padding-left: 36px;
 }
 
@@ -1086,20 +1098,21 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
-    row-gap: 30px;
-    margin-bottom: 54px;
+    row-gap: 23px;
+    margin-bottom: 62px;
     padding: 0;
 }
 
 .products-description{
     box-sizing: border-box;
+    border-radius: 4px;
     background-color: var(--basic-grey);
     color: var(--basic-greytext);
     line-height: 18px;
     text-align: center;
-    padding: 26px 53px 44px 52px;
+    padding: 27px 53px 44px 52px;
     position: absolute;
-    bottom: 0px;
+    bottom: 6px;
     width: 100%;
     
 }
@@ -1173,6 +1186,7 @@ img {
 
 .products-btn {
     padding: 17px 72px 15px 72px;
+    margin-bottom: 0px;
 }
 
 /* Переключатель страниц */
@@ -1182,7 +1196,7 @@ img {
     display: flex;
     justify-content: flex-start;
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 72px;
 }
 
 .page-item {
@@ -1214,13 +1228,14 @@ img {
 }
 
 .active-page {
-    border: 2px solid var(--grey-border);
+    border: 3px solid var(--grey-border);
     background-color: var(--active-page-btn);
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     border-radius: 3px;
     text-transform: uppercase;
+    padding: 14px 17px 12px 17px;
 }
 
 .next-btn {
@@ -1229,15 +1244,17 @@ img {
 
 /* Pop-up */
 .popup-container {
-    padding: 63px 99px 100px 84px;
+    padding: 63px 99px 84px 100px;
     background-color: var(--basic-white);
     position: absolute;
     left: 50%;
     margin-left: -480px;
-    bottom: 180px;
+    bottom: 188px;
     box-shadow: 0px 20px 40px var(--popup-shadow);
     width: 960px;
+    height: 590px;
     box-sizing: border-box;
+    
 }
 
 .popup-grid {
@@ -1273,7 +1290,7 @@ img {
     background-color: var(--basic-white);
     border: none;
     text-align: start;
-    padding: 16px;
+    padding: 14px;
     width: 80px;
     border: 2px solid var(--filter-grey);
     border-radius: 4px;
@@ -1299,9 +1316,10 @@ img {
 }
 
 .popup-btn {
-    padding: 17px 83px 15px 83px;
+    padding: 17px 83px 14px 83px;
     border: none;
-    margin-top: 47px;
+    margin-top: 43px;
+    width: 260px;
 }
 
 .popup-input:hover {
