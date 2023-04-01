@@ -137,14 +137,14 @@
                         <li class="sorting-list-item active-sorting-item"><a href="#"></a>По цене</li>
                         <li class="sorting-list-item"><a href="#"></a>По типу</li>
                         <li class="sorting-list-item"><a href="#"></a>По названию</li>
-                        <div class="arrows">
-                            <li class="sorting-list-item active-sorting-item arrow-up"><a href="#"></a><img
+                        <ul class="arrows">
+                            <li class="sorting-list-item active-sorting-item arrow-down"><a href="#"></a><img
                                     src="img/icon-down.svg" alt="Стрелка вниз">
                             </li>
-                            <li class="sorting-list-item arrow-down"><a href="#"></a><img src="img/icon-up.svg"
+                            <li class="sorting-list-item arrow-up"><a href="#"></a><img src="img/icon-up.svg"
                                     alt="Стрелка вверх">
                             </li>
-                        </div>
+                        </ul>
                     </ul>
                 </section>
                 <section class="products">
@@ -251,6 +251,21 @@
             </section>
         </div>
     </footer>
+    <div class="popup-container">
+        <div class="popup-cross">
+            <button class="cross-form" type="button"></button>
+            <p class="popup-tagline">Напишите нам</p>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="popup-grid">
+                <label class="popup-label">Ваше имя:<br><input type="text" name="name" placeholder="Имя Фамилия"
+                        class="popup-input" maxlength="30"></label>
+                <label class="popup-label">Ваш email:<br><input type="email" name="email"
+                        placeholder="email@example.com" class="popup-input" maxlength="30"></label>
+                <label class="popup-label popup-biginput">Текст письма:<br><textarea type="text" name="offer"
+                        placeholder="В свободной форме" class="popup-input popup-textarea" rows="4"></textarea></label>
+                <button class="btn popup-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
