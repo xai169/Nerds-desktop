@@ -1360,7 +1360,7 @@ header {
 }
 
 .popup-input {
-    color: var(--popup-text);
+    color: var(--basic-black);
     background-color: var(--basic-white);
     border: none;
     text-align: start;
