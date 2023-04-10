@@ -289,11 +289,13 @@ header {
 }
 
 .bg-pc {
-    background-image: url("../img/slide-2.png");
+    background: url("../img/slide-2.png") no-repeat 397px 0px;
+    height: 430px;
 }
 
 .bg-tablet {
-    background-image: url("../img/slide-3.png");
+    background: url("../img/slide-3.png") no-repeat 397px 0px;
+    height: 430px;
 }
 
 /* .slider-switcher {
@@ -663,7 +665,16 @@ header {
     background: url("../img/map.png") no-repeat center;
     margin-bottom: 66px;
     min-height: 416px;
+    position: relative;
 }
+
+/* .karta {
+    position: absolute;
+    border: none;
+    top: 100px;
+    left: 400px;
+    overflow:hidden;
+} */
 
 .contacts-info {
     background-color: var(--basic-white);
@@ -674,6 +685,7 @@ header {
     height: 308px;
     margin-right: auto;
     box-sizing: border-box;
+    /* z-index: 1; */
 }
 
 .contacts-tagline {
