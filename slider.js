@@ -12,6 +12,7 @@ switchButton2.addEventListener('click', function(){
     switchButton1.classList.remove('selected-switch');
     switchButton2.classList.add('selected-switch');
     switchButton3.classList.remove('selected-switch');
+    slide2.classList.add('slider-show');
 });
 
 switchButton3.addEventListener('click', function(){
@@ -21,7 +22,7 @@ switchButton3.addEventListener('click', function(){
     switchButton1.classList.remove('selected-switch');
     switchButton2.classList.remove('selected-switch');
     switchButton3.classList.add('selected-switch');
-    
+    slide3.classList.add('slider-show');
 });
 
 switchButton1.addEventListener('click', function(){
@@ -31,6 +32,6 @@ switchButton1.addEventListener('click', function(){
     switchButton1.classList.add('selected-switch');
     switchButton2.classList.remove('selected-switch');
     switchButton3.classList.remove('selected-switch');
-    
+    slide1.classList.add('slider-show');
 });
 

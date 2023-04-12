@@ -662,19 +662,19 @@ header {
 /*contacs*/
 
 .contacts {
-    background: url("../img/map.png") no-repeat center;
+    /* background: url("../img/map.png") no-repeat center; */
     margin-bottom: 66px;
     min-height: 416px;
     position: relative;
+    z-index: 1;
 }
 
-/* .karta {
+iframe {
     position: absolute;
-    border: none;
-    top: 100px;
-    left: 400px;
-    overflow:hidden;
-} */
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 
 .contacts-info {
     background-color: var(--basic-white);
@@ -685,7 +685,8 @@ header {
     height: 308px;
     margin-right: auto;
     box-sizing: border-box;
-    /* z-index: 1; */
+    z-index: 1;
+    position: relative;
 }
 
 .contacts-tagline {
@@ -1333,7 +1334,7 @@ header {
 .popup-container {
     padding: 63px 99px 84px 100px;
     background-color: var(--basic-white);
-    position: absolute;
+    position: fixed;
     left: 50%;
     margin-left: -480px;
     bottom: 188px;
@@ -1341,6 +1342,7 @@ header {
     width: 960px;
     height: 590px;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .popup-grid {
@@ -1456,4 +1458,68 @@ header {
 
 .cross-form:active {
     opacity: 0.1;
+}
+
+/*Анимация*/
+
+@keyframes popup-show {
+    from {
+        transform: translateY(900px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.popup-show {
+    animation-name: popup-show;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.17,.67,.42,.99);
+}
+
+@keyframes popup-close {
+    to {
+        transform: translateY(900px);
+    }
+    from {
+        transform: translateY(0);
+    }
+}
+
+.popup-close {
+    animation-name: popup-close;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.17,.67,.42,.99);
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.popup-shake {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes slider-show {
+    from {
+        transform: translateX(2000px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slider-show {
+    animation-name: slider-show;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.17,.67,.42,.99);
 }

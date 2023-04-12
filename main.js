@@ -11,6 +11,8 @@ const emailStorage = localStorage.getItem('email', email.value);
 popupBtn.addEventListener('click', function() {
     popup.classList.remove('disp-none');
     firstName.focus();
+    popup.classList.remove('popup-close');
+    popup.classList.add('popup-show');
     if (nameStorage && emailStorage) {
         firstName.value = nameStorage;
         email.value = emailStorage;
@@ -19,20 +21,26 @@ popupBtn.addEventListener('click', function() {
 });
 
 crossBtn.addEventListener('click', function() {
+    popup.classList.add('popup-close');
     popup.classList.add('disp-none');
+    popup.classList.remove('popup-shake');
 });
 
 document.addEventListener('keydown', function(evt) {
     if (evt.key === 'Escape') {
-        popup.classList.add('disp-none'); 
+        popup.classList.add('disp-none');
+        popup.classList.remove('popup-shake'); 
+        popup.classList.add('popup-close');
     }
 });
 
 form.addEventListener('submit', function(evt) {
     if (!firstName.value || !email.value || !offer.value) {
     evt.preventDefault();
+    popup.classList.add('popup-shake');
     } else {
         localStorage.setItem('name', firstName.value);
         localStorage.setItem('email', email.value);
     }
 });
+
