@@ -22,21 +22,27 @@ popupBtn.addEventListener('click', function() {
 
 crossBtn.addEventListener('click', function() {
     popup.classList.add('popup-close');
-    popup.classList.add('disp-none');
     popup.classList.remove('popup-shake');
+    setTimeout(() => {
+        popup.classList.add('disp-none');
+      }, 990);
 });
 
 document.addEventListener('keydown', function(evt) {
     if (evt.key === 'Escape') {
-        popup.classList.add('disp-none');
-        popup.classList.remove('popup-shake'); 
         popup.classList.add('popup-close');
+        popup.classList.remove('popup-shake'); 
+        setTimeout(() => {
+            popup.classList.add('disp-none');
+          }, 990);
     }
 });
 
 form.addEventListener('submit', function(evt) {
     if (!firstName.value || !email.value || !offer.value) {
     evt.preventDefault();
+    popup.classList.remove('popup-shake');
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add('popup-shake');
     } else {
         localStorage.setItem('name', firstName.value);
